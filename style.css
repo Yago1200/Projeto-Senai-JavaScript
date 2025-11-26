@@ -1,11 +1,3 @@
-/* PALETA DE CORES */
-:root {
-    --primary-purple: #8b798b; /* Roxo suave para texto */
-    --secondary-green: #e9fbe4; /* Verde claro/pálido para blocos */
-    --background-gray: #f2f2f2;
-    --text-color: #333;
-}
-
 /* RESET BÁSICO */
 * {
     margin: 0;
@@ -15,19 +7,19 @@
 }
 
 body {
-    background-color: var(--background-gray);
-    color: var(--text-color);
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 /* CONTAINER PRINCIPAL (Centraliza o conteúdo) */
-.products-area, .contact-area {
+section {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* HEADER/NAVBAR */
-.main-header {
+/* HEADER/NAV */
+.cabeçalho {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -35,14 +27,14 @@ body {
 }
 
 .logo {
-    color: var(--primary-purple);
+    color: #8b798b;
     font-size: 24px;
     font-weight: normal;
     text-transform: lowercase;
 }
 
-.main-nav a {
-    color: var(--primary-purple);
+.menu {
+    color: #8b798b;
     text-decoration: none;
     text-transform: lowercase;
     margin-left: 15px;
@@ -50,19 +42,19 @@ body {
 }
 
 /* SEÇÃO PRODUTOS */
-.product-list-container {
+.produtos-lista-container {
     padding: 20px;
-    background-color: var(--secondary-green);
+    background-color: #e9fbe4; 
     border-radius: 10px; /* Bordas arredondadas */
 }
 
-.product-list {
+.produtos-lista {
     display: flex;
     justify-content: space-between;
     gap: 15px;
 }
 
-.product-card {
+.produtos-card {
     flex: 1;
     text-align: center;
     background-color: #fff; /* Fundo branco para os cards de produto */
@@ -70,7 +62,7 @@ body {
     border-radius: 5px;
 }
 
-.product-image {
+.produtos-imagem {
     width: 100%;
     height: 180px; /* Altura fixa para simular as imagens do mockup */
     object-fit: cover;
@@ -79,14 +71,14 @@ body {
     border: 1px solid #ccc; /* Borda leve para simular a separação */
 }
 
-.product-name, .product-price {
+.produtos-nome, .product-price {
     font-size: 0.9em;
-    color: var(--text-color);
+    color: #333;
     text-transform: lowercase;
     margin: 3px 0;
 }
 
-.product-price {
+.produtos-preco {
     font-weight: bold;
 }
 
@@ -99,9 +91,9 @@ body {
     margin-top: 40px; /* Espaço entre o fim da lista de produtos e o segundo cabeçalho */
 }
 
-.contact-area h2 {
+h2 {
     text-transform: lowercase;
-    color: var(--text-color);
+    color: #333;
     font-size: 18px;
     font-weight: normal;
     margin-bottom: 10px;
@@ -127,24 +119,24 @@ body {
 }
 
 /* O bloco verde que envolve o input */
-.input-green-box {
-    background-color: var(--secondary-green);
+.fundo-caixa {
+    background-color: #e9fbe4; 
     padding: 5px;
     border-radius: 5px;
 }
 
-.input-green-box input,
-.input-green-box textarea {
+.fundo-caixa input,
+.fundo-caixa textarea {
     width: 100%;
     padding: 5px;
     border: none;
     background: transparent;
     outline: none;
     font-size: 16px;
-    color: var(--text-color);
+    color: #333;
 }
 
-.input-green-box textarea {
+.fundo-caixa textarea {
     resize: none; 
 }
 
