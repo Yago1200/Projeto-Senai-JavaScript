@@ -1,0 +1,161 @@
+/* PALETA DE CORES */
+:root {
+    --primary-purple: #8b798b; /* Roxo suave para texto */
+    --secondary-green: #e9fbe4; /* Verde claro/pálido para blocos */
+    --background-gray: #f2f2f2;
+    --text-color: #333;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-gray);
+    color: var(--text-color);
+}
+
+/* CONTAINER PRINCIPAL (Centraliza o conteúdo) */
+.products-area, .contact-area {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER/NAVBAR */
+.main-header {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-purple);
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+.main-nav a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    text-transform: lowercase;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* SEÇÃO PRODUTOS */
+.product-list-container {
+    padding: 20px;
+    background-color: var(--secondary-green);
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.product-card {
+    flex: 1;
+    text-align: center;
+    background-color: #fff; /* Fundo branco para os cards de produto */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px; /* Altura fixa para simular as imagens do mockup */
+    object-fit: cover;
+    margin-bottom: 5px;
+    background-color: #eee;
+    border: 1px solid #ccc; /* Borda leve para simular a separação */
+}
+
+.product-name, .product-price {
+    font-size: 0.9em;
+    color: var(--text-color);
+    text-transform: lowercase;
+    margin: 3px 0;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+/* SEÇÃO CONTATO */
+.contact-area {
+    padding-top: 0;
+}
+
+.contact-header {
+    margin-top: 40px; /* Espaço entre o fim da lista de produtos e o segundo cabeçalho */
+}
+
+.contact-area h2 {
+    text-transform: lowercase;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Estilização do formulário */
+.contact-form-design {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    /* A borda pode simular o "Rectangle 3" que envolve o formulário */
+    border: 1px solid #ccc; 
+}
+
+.contact-form-design label {
+    display: block;
+    font-size: 14px;
+    text-transform: lowercase;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* O bloco verde que envolve o input */
+.input-green-box {
+    background-color: var(--secondary-green);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input-green-box input,
+.input-green-box textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.input-green-box textarea {
+    resize: none; 
+}
+
+/* RESPONSIVIDADE BÁSICA */
+@media (max-width: 600px) {
+    .product-list {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .product-card {
+        width: 45%; /* Mostra dois cards por linha */
+        max-width: 45%; 
+    }
+}
