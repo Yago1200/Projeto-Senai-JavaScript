@@ -1,56 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>doado's - Brechó Online</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Doado's — Produtos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <section>
-        <header class="cabeçalho">
-            <h1 class="logo">doado's</h1>
-            <nav class="menu">
-                <a href="index.html">home</a>
-                <a href="#">sobre</a>
-                <a href="produtos.html">produtos</a>
-                <a href="contactForm.html">contact</a>
-            </nav>
+<body>
+    <div class="page-wrap">
+        <header class="site-header">
+            <div class="header-top">
+                <div class="crumb">♦ produtos</div>
+                <nav class="main-nav">
+                    <a href="index.html">home</a>
+                    <a href="">sobre</a>
+                    <a href="produtos.html" class="active">produtos</a>
+                    <a href="contato.html">contato</a>
+                </nav>
+            </div>
+            <div class="brand-row">
+                <img src="imagens/logo.png" alt="logo" class="logo-line">
+            </div>
         </header>
 
-        <div class="produtos-lista-container">
-            <div class="produtos-lista">
-                
-                <div class="produtos-card">
-                    <img src="imagens/vestido_preto.png" alt="Vestido Preto Longo" class="produtos-imagem">
-                    <p class="product-nome">vestido preto longo</p>
-                    <p class="produtos-preco">20,90R$</p>
-                </div>
-                
-                <div class="produtos-card">
-                    <img src="imagens/bota_preta.png" alt="Bota Cano Alto Preta" class="produtos-imagem">
-                    <p class="produtos-nome">bota cano alto preta</p>
-                    <p class="produtos-preco">50,00R$</p>
-                </div>
-                
-                <div class="produtos-card">
-                    <img src="imagens/camisa_laranja.png" alt="Camisa Laranja" class="produtos-imagem">
-                    <p class="produtos-nome">camisa laranja</p>
-                    <p class="produtos-preco">15,50R$</p>
-                </div>
-                
-                <div class="produtos-card">
-                    <img src="imagens/calça_preta.png" alt="Calça Social Preta" class="produtos-imagem">
-                    <p class="produtos-nome">calça social preta</p>
-                    <p class="produtos-preco">30,90R$</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <main class="site-main">
+            <section class="card products-card">
+                <div class="products-grid">
+                    <article class="product">
+                        <div class="product-img"><img src="imagens/vestido_preto.png" alt="vestido"></div>
+                        <div class="product-label">vestido preto longo</div>
+                        <div class="price">20,90R$</div>
+                    </article>
 
+                    <article class="product">
+                        <div class="product-img"><img src="imagens/bota_preta.png" alt="bota"></div>
+                        <div class="product-label">bota cano alto preta</div>
+                        <div class="price">50,90R$</div>
+                    </article>
 
+                    <article class="product">
+                        <div class="product-img"><img src="imagens/camisa_laranja.png" alt="camisa"></div>
+                        <div class="product-label">camisa laranja</div>
+                        <div class="price">15,50R$</div>
+                    </article>
 
-    <script src="script.js"></script> 
+                    <article class="product">
+                        <div class="product-img"><img src="imagens/calça_preta.png" alt="calça"></div>
+                        <div class="product-label">calça social preta</div>
+                        <div class="price">30,90R$</div>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <div>whatsap: (11)94549-2121</div>
+                <div>email: doadosloja@gmail.com</div>
+            </footer>
+        </main>
+    </div>
 </body>
+
 </html>

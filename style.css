@@ -1,141 +1,276 @@
-/* RESET BÁSICO */
+/* Estilo baseado na imagem do Figma:
+   palette principal: bege areia, lilás/roxo, verde claro, rosa suave.
+   Uso de Poppins para similaridade com o layout. */
+
+:root {
+    --bg: #EBDEB8;
+    --panel: #efe1c7;
+    /* bege claro do header/rodapé */
+    --accent: #8b5bbf;
+    /* roxo principal */
+    --accent-2: #b86fcf;
+    /* lilás mais claro */
+    --mint: #DEF9B8;
+    /* verde claro das caixas internas */
+    --soft-pink: #f7d9f0;
+    /* rosa suave usado em etiquetas */
+    --text: #4b3a57;
+    --muted: #7b6b84;
+    --card-radius: 18px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box
 }
 
+html,
 body {
-    background-color: #ece8ac;
-    color: #333;
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-/* CONTAINER PRINCIPAL (Centraliza o conteúdo) */
-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.page-wrap {
+    max-width: 1180px;
+    margin: 28px auto;
+    display: block
 }
 
-/* HEADER/NAV */
-.cabeçalho {
-    margin-bottom: 10px;
+/* Header */
+.site-header {
+    background: var(--panel);
+    padding: 10px;
+    border-radius: 12px 12px 8px 8px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.03)
+}
+
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 6px 18px
 }
 
-.logo {
-    color: #8b798b;
-    font-size: 24px;
-    font-weight: normal;
-    text-transform: lowercase;
+.crumb {
+    color: var(--accent);
+    font-weight: 600
 }
 
-.menu {
-    color: #8b798b;
+.main-nav a {
+    margin-left: 18px;
+    color: var(--muted);
     text-decoration: none;
-    text-transform: lowercase;
-    margin-left: 15px;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 14px
 }
 
-/* SEÇÃO PRODUTOS */
-.produtos-lista-container {
-    padding: 20px;
-    background-color: #e9fbe4; 
-    border-radius: 10px; /* Bordas arredondadas */
+.main-nav a.active,
+.main-nav a:hover {
+    color: var(--accent)
 }
 
-.produtos-lista {
+.brand-row {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: flex-start;
+    padding: 4px 18px
 }
 
-.produtos-card {
+.logo-line {
+    height: 36px;
+    opacity: 0.95
+}
+
+/* Card base (a "caixa" verde/creme do design) */
+.site-main {
+    padding: 6px
+}
+
+.card {
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.02);
+    display: block
+}
+
+/* Home specific */
+.home-card {
+    display: flex;
+    gap: 22px;
+    align-items: center
+}
+
+.left-illustration img {
+    width: 280px;
+    height: auto;
+    border-radius: 16px;
+    background: var(--accent-2);
+    padding: 18px
+}
+
+.right-panel {
     flex: 1;
-    text-align: center;
-    background-color: #fff; /* Fundo branco para os cards de produto */
-    padding: 10px;
-    border-radius: 5px;
+    background: var(--mint);
+    padding: 22px;
+    border-radius: 12px;
+    margin-right: 6px;
+    color: var(--text)
 }
 
-.produtos-imagem {
-    width: 100%;
-    height: 180px; /* Altura fixa para simular as imagens do mockup */
-    object-fit: cover;
-    margin-bottom: 5px;
-    background-color: #eee;
-    border: 1px solid #ccc; /* Borda leve para simular a separação */
-}
-
-.produtos-nome, .product-price {
-    font-size: 0.9em;
-    color: #333;
-    text-transform: lowercase;
-    margin: 3px 0;
-}
-
-.produtos-preco {
-    font-weight: bold;
-}
-
-/* SEÇÃO CONTATO */
-.contact-area {
-    padding-top: 0;
-}
-
-.contact-header {
-    margin-top: 40px; /* Espaço entre o fim da lista de produtos e o segundo cabeçalho */
-}
-
-h2 {
-    text-transform: lowercase;
-    color: #333;
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-/* Estilização do formulário */
-.contact-form-design {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    /* A borda pode simular o "Rectangle 3" que envolve o formulário */
-    border: 1px solid #ccc; 
-}
-
-.contact-form-design label {
+.logo-small {
+    width: 140px;
     display: block;
+    margin-bottom: 8px
+}
+
+.lead {
     font-size: 14px;
-    text-transform: lowercase;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 6px 0
 }
 
-/* O bloco verde que envolve o input */
-.fundo-caixa {
-    background-color: #e9fbe4; 
-    padding: 5px;
-    border-radius: 5px;
+.note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px
 }
 
-.fundo-caixa input,
-.fundo-caixa textarea {
+/* Produtos */
+.products-card {
+    padding: 22px
+}
+
+.products-grid {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.product {
+    background: var(--mint);
+    border-radius: 14px;
+    padding: 12px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 6px 0 rgba(184, 111, 207, 0.06)
+}
+
+.product-img {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px
+}
+
+.product-img img {
+    max-height: 150px;
+    max-width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    padding: 6px
+}
+
+.product-label {
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 8px
+}
+
+.price {
+    background: var(--soft-pink);
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 16px;
+    margin-top: 8px;
+    font-weight: 700;
+    color: var(--accent-2)
+}
+
+/* Contato */
+.contact-card {
+    padding: 22px;
+    background: var(--mint)
+}
+
+.contact-card h2 {
+    color: var(--accent);
+    margin-top: 0
+}
+
+.contact-form {
+    max-width: 720px
+}
+
+.contact-form label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 10px 0 6px
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 5px;
-    border: none;
-    background: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(139, 91, 191, 0.12);
+    background: #f8fff8;
     outline: none;
-    font-size: 16px;
-    color: #333;
+    font-size: 14px;
+    color: var(--text)
 }
 
-.fundo-caixa textarea {
-    resize: none; 
+.contact-form textarea {
+    resize: vertical
+}
+
+.btn-row {
+    margin-top: 12px;
+    text-align: right
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06)
+}
+
+.btn-primary:active {
+    transform: translateY(1px)
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 22px;
+    background: transparent;
+    color: var(--muted);
+    text-align: center;
+    padding: 12px;
+    font-size: 13px
+}
+
+/* Responsividade simples */
+@media (max-width:900px) {
+    .home-card {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .left-illustration img {
+        width: 100%
+    }
+
+    .products-grid {
+        justify-content: space-around
+    }
 }
