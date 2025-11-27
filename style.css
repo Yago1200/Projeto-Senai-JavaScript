@@ -6,7 +6,7 @@
     --bg: #EBDEB8;
     --panel: #efe1c7;
     /* bege claro do header/rodapé */
-    --accent: #8b5bbf;
+    --accent: #9C77AA;
     /* roxo principal */
     --accent-2: #b86fcf;
     /* lilás mais claro */
@@ -15,7 +15,7 @@
     --soft-pink: #f7d9f0;
     /* rosa suave usado em etiquetas */
     --text: #4b3a57;
-    --muted: #7b6b84;
+    --muted: #665370;
     --card-radius: 18px;
 }
 
@@ -71,15 +71,19 @@ body {
     color: var(--accent)
 }
 
-.brand-row {
+.logo {
     display: flex;
     justify-content: flex-start;
-    padding: 4px 18px
+    padding: 4px 18px;
+  
 }
 
 .logo-line {
     height: 36px;
-    opacity: 0.95
+    opacity: 0.95;
+    height: 100px;
+    width: 100px;
+
 }
 
 /* Card base (a "caixa" verde/creme do design) */
@@ -111,25 +115,26 @@ body {
 }
 
 .right-panel {
-    flex: 1;
     background: var(--mint);
     padding: 22px;
     border-radius: 12px;
     margin-right: 6px;
-    color: var(--text)
+    color: var(--text);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-small {
     width: 140px;
-    display: block;
-    margin-bottom: 8px
+    
 }
 
 .lead {
     font-size: 14px;
     line-height: 1.5;
     color: var(--text);
-    margin: 6px 0
+    margin: 6px 0;
 }
 
 .note {
